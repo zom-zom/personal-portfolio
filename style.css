@@ -1,0 +1,157 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/*navigation bar*/
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+   padding: 10px 20px;
+   height:80px;
+}
+
+nav .left a{
+    color:var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    color:var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* SECTION 1: About */
+#about-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+}
+
+#aobut-section .text {
+    flex: 5;
+}
+
+#headshot .text h2{
+    font-size: 65px;
+}
+
+#about-section .headshot {
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* 让图片和图标垂直排列 */
+    align-items: center;
+}
+
+#about-section .headshot img {
+    max-width: 500px;
+    max-height: 700px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+
+#about-section .social-links {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
+
+}
+
+#about-section .social-links a {
+    padding: 0;
+    margin: 0 0.75rem;
+}
+
+#about-section .social-links a i {
+    color: #cc005f;
+    transition: transform 0.3s, color 0.3s;
+    will-change: transform;
+}
+
+#about-section .social-links a:hover i {
+    color: #f32685;
+    transform: scale(1.2);
+}
+
+#about-section h2 {
+    letter-spacing: 1px;
+    position: relative;
+}
+
+@media (max-width: 850px){
+    #about-section .text h2{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    #about-section {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px){
+    nav{
+        padding: 0 10px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+
+section {
+    padding: 8rem 2rem;
+    min-height: 80vh; /* Reduce the default minimum height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
