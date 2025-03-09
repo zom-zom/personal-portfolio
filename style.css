@@ -62,29 +62,54 @@ nav .right a:last-child {
     gap: 40px;
 }
 
-#aobut-section .text {
+#about-section .text {
     flex: 5;
 }
 
-#headshot .text h2{
+#about-section .text h2{
     font-size: 65px;
 }
 
-#about-section .headshot {
+#about-section .text span {
+  color: rgb(204, 34, 226); 
+}
+
+#about-section .text a {
+    color: #cc005f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: rgb(103, 228, 186);
+}
+
+
+
+#about-section .right {
     flex: 2;
     display: flex;
     flex-direction: column; /* 让图片和图标垂直排列 */
     align-items: center;
 }
-
-#about-section .headshot img {
-    max-width: 500px;
-    max-height: 700px;
-    width: auto;
-    height: auto;
+#about-section .right .headshot {
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 37px;
     border-radius: 50%;
-    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#about-section .right .headshot img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
   }
+
+#about-section .right .headshot img:hover {
+    transform: scale(1.2);
+}
 
 #about-section .social-links {
     font-size: 2.25rem;
@@ -106,8 +131,13 @@ nav .right a:last-child {
 }
 
 #about-section .social-links a:hover i {
-    color: #f32685;
+    color: #ec5fa1;
     transform: scale(1.2);
+}
+
+#about-section .text {
+    width: 80rem;
+    color: #1a1c20;
 }
 
 #about-section h2 {
@@ -115,16 +145,22 @@ nav .right a:last-child {
     position: relative;
 }
 
-@media (max-width: 850px){
+@media (max-width: 1690px) {
     #about-section .text h2{
-        font-size: 35px;
+        font-size: 50px;
     }
+}
+
+@media (max-width: 850px){
+
+
 }
 
 @media (max-width: 740px) {
     #about-section {
         flex-direction: column-reverse;
     }
+
 }
 
 @media (max-width: 600px){
@@ -141,6 +177,7 @@ nav .right a:last-child {
         background-color: transparent;
         padding: 0;
     }
+
 }
 
 
@@ -155,3 +192,4 @@ section {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
+
