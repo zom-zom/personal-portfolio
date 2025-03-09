@@ -71,17 +71,35 @@ nav .right a:last-child {
 }
 
 #about-section .text span {
-  color: rgb(204, 34, 226); 
+  color: #8a11cf;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 #about-section .text a {
+    display: inline-block;
+    width: 20rem;
     color: #cc005f;
     text-decoration: none;
     transition: color 0.3s ease;
-    background-color: rgb(103, 228, 186);
+    background-color: #adede9;
+    transition: transform 0.3s ease;
 }
 
+#about-section .text a span {
+    color: #cc005f;
+}
 
+#about-section .text a span:hover{
+    color: #ff00ea;
+}
+
+#about-section .text a:hover {
+    background-color: #fce97e;
+    transform: scale(1.2);
+    color: #04ff2d;
+
+}
 
 #about-section .right {
     flex: 2;
